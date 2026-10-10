@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>校招宣讲</title>
+<style>
+:root{--bg:#F9F7F5;--surface:#FFFFFF;--text:#240F1B;--muted:#9F969B;--border:#E4E2E3;--accent:#770523;--soft:#FFDDE1;--danger:#D20307}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--text);font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}
+body{display:flex;align-items:center;justify-content:center;padding:24px}
+.card{width:min(440px,100%);background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:36px 32px;box-shadow:0 10px 30px rgba(119,5,35,.06)}
+.brand{font-family:"Noto Serif SC","Songti SC",serif;font-size:22px;color:var(--accent);margin:0 0 6px}
+h1{font-size:18px;font-weight:600;margin:0 0 24px;line-height:1.4}
+label{display:block;font-size:13px;color:var(--muted);margin-bottom:8px}
+input{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--border);border-radius:12px;background:var(--bg);color:var(--text);outline:none}
+input:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--soft)}
+button{width:100%;margin-top:14px;font:inherit;font-size:16px;font-weight:600;padding:12px;border:none;border-radius:999px;background:var(--accent);color:#fff;cursor:pointer}
+button:disabled{opacity:.5;cursor:default}
+.msg{min-height:20px;margin-top:14px;font-size:13px;color:var(--muted)}
+.msg.err{color:var(--danger)}
+.bar{height:4px;background:var(--soft);border-radius:2px;overflow:hidden;margin-top:10px;display:none}
+.bar i{display:block;height:100%;width:0;background:var(--accent);transition:width .2s}
+.bar.on{display:block}
+</style>
+</head>
+<body>
+<form class="card" id="f">
+  <p class="brand">Momcozy</p>
+  <h1>路特创新 × 西安交通大学 · 2027 届校园招聘宣讲</h1>
+  <label for="pw">访问密码</label>
+  <input id="pw" type="password" autocomplete="current-password" autofocus>
+  <button id="go" type="submit">打开</button>
+  <div class="bar" id="bar"><i id="fill"></i></div>
+  <p class="msg" id="msg"></p>
+</form>
+<script>
+(function(){
+  var ENC='deck.enc', KEY='deck_pw';
+  var f=document.getElementById('f'),pw=document.getElementById('pw'),go=document.getElementById('go'),msg=document.getElementById('msg'),bar=document.getElementById('bar'),fill=document.getElementById('fill');
+  function say(t,err){msg.textContent=t;msg.className='msg'+(err?' err':'')}
+  async function deriveKey(password,salt){
+    var raw=await crypto.subtle.importKey('raw',new TextEncoder().encode(password),'PBKDF2',false,['deriveKey']);
+    return crypto.subtle.deriveKey({name:'PBKDF2',salt:salt,iterations:200000,hash:'SHA-256'},raw,{name:'AES-GCM',length:256},false,['decrypt']);
+  }
+  async function fetchEnc(){
+    var r=await fetch(ENC,{cache:'force-cache'});
+    if(!r.ok)throw new Error('http '+r.status);
+    var total=+r.headers.get('content-length')||0;
+    if(!r.body||!total)return new Uint8Array(await r.arrayBuffer());
+    var reader=r.body.getReader(),chunks=[],got=0;bar.classList.add('on');
+    for(;;){var x=await reader.read();if(x.done)break;chunks.push(x.value);got+=x.value.length;fill.style.width=Math.round(got/total*100)+'%';}
+    var out=new Uint8Array(got),o=0;chunks.forEach(function(c){out.set(c,o);o+=c.length});return out;
+  }
+  async function unlock(password,quiet){
+    go.disabled=true;
+    try{
+      if(!quiet)say('正在加载，约 60 MB，请稍候…');
+      var buf=await fetchEnc();
+      var salt=buf.slice(0,16),iv=buf.slice(16,28),data=buf.slice(28);
+      if(!quiet)say('正在解密…');
+      var key=await deriveKey(password,salt);
+      var plain=await crypto.subtle.decrypt({name:'AES-GCM',iv:iv},key,data);
+      try{sessionStorage.setItem(KEY,password)}catch(e){}
+      var html=new TextDecoder().decode(plain);
+      document.open();document.write(html);document.close();
+    }catch(e){
+      go.disabled=false;bar.classList.remove('on');fill.style.width='0';
+      if(String(e).indexOf('http')>-1||String(e).indexOf('fetch')>-1)say('文件加载失败，请检查网络后重试',true);
+      else{say('密码不对，再试一次',true);try{sessionStorage.removeItem(KEY)}catch(x){}}
+    }
+  }
+  f.addEventListener('submit',function(e){e.preventDefault();if(pw.value)unlock(pw.value,false)});
+  /* 同一标签页内（含演讲者视图的预览窗口）已解锁过，直接打开 */
+  var saved=null;try{saved=sessionStorage.getItem(KEY)}catch(e){}
+  if(saved){f.style.visibility='hidden';unlock(saved,true)}
+})();
+</script>
+</body>
+</html>
