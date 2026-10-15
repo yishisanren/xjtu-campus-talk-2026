@@ -1,0 +1,27 @@
+/* theme: momcozy — 路特创新 / Momcozy 3.0 品牌色（Mom 产品线）
+ * 色值取自 OpenWork momcozy-shadcn-design-system（2026-10-09 读取）：
+ *   Backgrounds Primary #F9F7F5 · Secondary #FFFFFF · Grays 100 #F0EEEF
+ *   Text Primary #240F1B · Text Secondary #9F969B · Border #E4E2E3
+ *   Mom 900 #3E0010 · Mom 700 / Fills Primary #770523 · Mom 500 #EE9CA7 · Mom 300 #FFC0CB · Mom 100 #FFDDE1 · Mom 50 #FFF7F8
+ *   Status Success #009E3D · Warning #F38245 · Danger #D20307
+ *   Radius 2xl 16 · 3xl 24 · 4xl 32
+ * --text-2 用 color-mix 从 Text Primary 推导：Text Secondary (#9F969B) 在投影上对比度不够。
+ * 品牌字体 Exposure / Aeonik Soft Pro 本机无授权文件，用衬线/黑体系统字体代替。 */
+:root{
+  --bg:#F9F7F5;--bg-soft:#F0EEEF;--surface:#FFFFFF;--surface-2:#FFF7F8;
+  --border:#E4E2E3;--border-strong:#D3CFD1;
+  --text-1:#240F1B;--text-2:color-mix(in srgb,#240F1B 72%,#F9F7F5);--text-3:#9F969B;
+  --accent:#770523;--accent-2:#EE9CA7;--accent-3:#FFC0CB;
+  --accent-ink:#FFFFFF;  /* text on --accent — 11.6:1 */
+  --accent-soft:#FFDDE1;--accent-deep:#3E0010;
+  --good:#009E3D;--warn:#F38245;--bad:#D20307;
+  --grad:linear-gradient(135deg,#3E0010,#770523 55%,#DA5876);
+  --grad-soft:linear-gradient(135deg,#FFF7F8,#FFDDE1);
+  --radius:24px;--radius-sm:16px;--radius-lg:32px;
+  --shadow:0 2px 6px rgba(36,15,27,.04),0 10px 30px rgba(119,5,35,.06);
+  --shadow-lg:0 24px 60px rgba(119,5,35,.12),0 6px 16px rgba(36,15,27,.05);
+  --font-sans:'Noto Sans SC','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;
+  --font-display:'Noto Serif SC','Songti SC','STSong','Source Han Serif SC',serif;
+  --font-serif:'Noto Serif SC','Songti SC','STSong',serif;
+  --letter-tight:-.01em;
+}

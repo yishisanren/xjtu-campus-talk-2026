@@ -1,80 +1,619 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-themes="momcozy" data-theme-base="assets/themes/">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>校招宣讲</title>
-<style>
-:root{--bg:#F9F7F5;--surface:#FFFFFF;--text:#240F1B;--muted:#9F969B;--border:#E4E2E3;--accent:#770523;--soft:#FFDDE1;--danger:#D20307}
-*{box-sizing:border-box}
-html,body{margin:0;height:100%;background:var(--bg);color:var(--text);font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}
-body{display:flex;align-items:center;justify-content:center;padding:24px}
-.card{width:min(440px,100%);background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:36px 32px;box-shadow:0 10px 30px rgba(119,5,35,.06)}
-.brand{font-family:"Noto Serif SC","Songti SC",serif;font-size:22px;color:var(--accent);margin:0 0 6px}
-h1{font-size:18px;font-weight:600;margin:0 0 24px;line-height:1.4}
-label{display:block;font-size:13px;color:var(--muted);margin-bottom:8px}
-input{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1px solid var(--border);border-radius:12px;background:var(--bg);color:var(--text);outline:none}
-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--soft)}
-button{width:100%;margin-top:14px;font:inherit;font-size:16px;font-weight:600;padding:12px;border:none;border-radius:999px;background:var(--accent);color:#fff;cursor:pointer}
-button:disabled{opacity:.5;cursor:default}
-.msg{min-height:20px;margin-top:14px;font-size:13px;color:var(--muted)}
-.msg.err{color:var(--danger)}
-.bar{height:4px;background:var(--soft);border-radius:2px;overflow:hidden;margin-top:10px;display:none}
-.bar i{display:block;height:100%;width:0;background:var(--accent);transition:width .2s}
-.bar.on{display:block}
-</style>
+<title>在母婴科技赛道，和一群人做有温度的事 · 路特创新 × 西安交大 2027 校招</title>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" id="theme-link" href="assets/themes/momcozy.css">
+<link rel="stylesheet" href="assets/animations/animations.css">
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
-<form class="card" id="f">
-  <p class="brand">Momcozy</p>
-  <h1>路特创新 × 西安交通大学 · 2027 届校园招聘宣讲</h1>
-  <label for="pw">访问密码</label>
-  <input id="pw" type="password" autocomplete="current-password" autofocus>
-  <button id="go" type="submit">打开</button>
-  <div class="bar" id="bar"><i id="fill"></i></div>
-  <p class="msg" id="msg"></p>
-</form>
+<body class="tpl-momcozy">
+<div class="deck">
+
+  <!-- 01 封面 -->
+  <section class="slide cover" data-title="封面" data-no-logo>
+    <div class="fx-bg glow" data-fx="cozy-glow" data-fx-region="right"></div>
+    <div class="brand"><b>Momcozy</b><i></i><span>路特创新 × 西安交通大学 · 2027 届校园招聘</span></div>
+    <h1 class="h1" data-anim="rise-in">在母婴科技赛道，<br>和一群人做<span class="em">有温度</span>的事</h1>
+    <p class="lede" data-anim="fade-up">一个学长的 15 年，一家深圳公司的 9 年，和你们接下来的几年。</p>
+    <div class="who" data-anim="fade-up">
+      <img class="av" src="media/image1.jpeg" alt="">
+      <div><b>张卫卫</b>工业设计 2007 级 · 路特创新 应用生态体验与研发中心 IoT 产品总监</div>
+    </div>
+    <aside class="notes">
+      <p>上台先停两秒，看一圈台下再开口。</p>
+      <p>各位 2027 届的同学，下午好。我叫张卫卫，现在在路特创新做 IoT 产品总监。</p>
+      <p><strong>今天回来，我的第一个身份是学长。</strong>我是 2007 级工业设计专业的，2011 年从这里毕业。这是我第一次来咱们这个校区，我毕业那会，这个校区还没建好。十五年后站到这个台上，说实话，比在公司开会紧张。</p>
+    </aside>
+  </section>
+
+  <!-- 02 自我介绍 -->
+  <section class="slide" data-title="自我介绍">
+    <div class="fx-bg dust" data-fx="cozy-dust"></div>
+    <div class="intro-only">
+      <div>
+        <p class="kicker">自我介绍</p>
+        <h2 class="intro-name">张卫卫<span>David</span></h2>
+        <ul class="intro-list anim-stagger-list">
+          <li><span class="k">学历</span><span>西安交通大学 · 工业设计 · 2007 级</span></li>
+          <li><span class="k">经验</span><span>15 年软件产品设计经验，近 9 年专注 IoT 智能硬件</span></li>
+          <li><span class="k">过去</span><span>曾任职于互联网大厂<b>百度</b>、全球 PC 龙头<b>联想</b>、世界 500 强<b>美的集团</b>、智能清洁头部<b>追觅科技</b>等企业，历任资深产品经理、产品总监、CPO 等职位</span></li>
+          <li><span class="k">现在</span><span><b>路特创新</b> 应用生态体验与研发中心 IoT 产品总监</span></li>
+        </ul>
+      </div>
+    </div>
+    <aside class="notes">
+      <p>毕业这十五年，<strong>前六年</strong>我在百度、联想、魅族做手机和手表的操作系统设计；<strong>后来转做产品</strong>，在美的、追觅这些公司做智能硬件。去年加入路特，开始给妈妈和宝宝做产品。</p>
+      <p>过渡：今天想和大家聊三件事。</p>
+    </aside>
+  </section>
+
+  <!-- 03 目录 -->
+  <section class="slide" data-title="今天聊三件事">
+    <div class="fx-bg dust" data-fx="cozy-dust"></div>
+    <p class="kicker">今天聊三件事</p>
+    <h2 class="h2">行业、公司，和你</h2>
+    <div class="agenda anim-stagger-list">
+      <div class="card"><div class="no">01</div><h4>先聊行业</h4><p class="dim">母婴科技这个赛道，空间到底有多大。</p></div>
+      <div class="card"><div class="no">02</div><h4>再说路特</h4><p class="dim">一家深圳公司，怎么走进全球 600 万个家庭。</p></div>
+      <div class="card"><div class="no">03</div><h4>最后说你</h4><p class="dim">刚毕业来路特，会经历什么。</p></div>
+    </div>
+    <aside class="notes">
+      <p>第一，母婴科技这个行业的空间有多大；第二，路特这家公司是怎么一步步做起来的；第三，也是大家最关心的，<strong>你来了以后会经历什么</strong>。</p>
+    </aside>
+  </section>
+
+  <!-- 04 章节 01 -->
+  <section class="slide sec-divider center tc" data-title="01 行业">
+    <div class="fx-bg soft" data-fx="constellation"></div>
+    <div>
+      <p class="sec-no" data-anim="rise-in">01</p>
+      <h1 class="h1" data-anim="fade-up">先聊行业</h1>
+      <p class="lede" style="margin:0 auto" data-anim="fade-up">母婴科技这个赛道，空间有多大</p>
+    </div>
+    <aside class="notes">
+      <p>这一段不看稿，像聊天。</p>
+      <p><strong>先讲点我自己的事。</strong>我是农村出来的，实不相瞒，我吃母乳吃到了 5 岁。</p>
+    </aside>
+  </section>
+
+  <!-- 05 举手 -->
+  <section class="slide hand center tc" data-title="你吃到几岁">
+    <div class="fx-bg dust" data-fx="cozy-dust"></div>
+    <div>
+      <div class="big" data-anim="rise-in">5<small>岁</small></div>
+      <p class="ask" data-anim="fade-up">你吃母乳吃到<b>几岁</b>？</p>
+    </div>
+    <aside class="notes">
+      <p>不知道大家还记不记得，自己吃母乳吃到几岁？<strong>现场吃到 2 岁以上的，可以举个手。</strong></p>
+      <p>等三秒，看一眼人数。人多就说「比我想的多」，人少就说「看来我是真的少见」。</p>
+      <p>过渡：我后来才知道，世界卫生组织的建议是……</p>
+    </aside>
+  </section>
+
+  <!-- 06 建议 vs 现实 -->
+  <section class="slide" data-title="建议和现实">
+    <div class="fx-bg dust" data-fx="cozy-dust"></div>
+    <p class="kicker">母乳喂养 · 建议和现实</p>
+    <h2 class="h2">按世卫的标准，我妈妈超额完成了</h2>
+    <div class="kpis anim-stagger-list">
+      <div class="kpi"><div class="big">2<small>岁+</small></div><p class="lab">世卫组织建议：前 6 个月纯母乳，之后继续喂到 2 岁或更久</p><p class="src">WHO 婴幼儿喂养情况说明书</p></div>
+      <div class="kpi"><div class="big"><span class="counter" data-to="45">0</span><small>%</small></div><p class="lab">全球 2 岁时还在吃母乳的孩子；2030 年目标 60%</p><p class="src">联合国儿基会 / 世卫组织，2023</p></div>
+      <div class="kpi"><div class="big">29.2<small>%</small></div><p class="lab">中国 6 个月内纯母乳喂养率；国家目标 50%</p><p class="src">中国发展研究基金会，2019</p></div>
+      <div class="kpi"><div class="big">1/5</div><p class="lab">高收入国家 1 岁时还在吃母乳的孩子</p><p class="src">《柳叶刀》母乳喂养系列，2016</p></div>
+    </div>
+    <aside class="notes">
+      <p>世界卫生组织的建议是：<strong>前 6 个月只吃母乳，之后一边加辅食一边继续喂，喂到 2 岁或者更久</strong>。按这个标准，我妈妈是超额完成了。</p>
+      <p>但全世界大多数妈妈做不到。联合国儿基会和世卫组织 2023 年的全球数据：6 个月以下只吃母乳的婴儿，48%；<strong>到 2 岁还在吃母乳的，45%</strong>。</p>
+      <p>过渡：我挑了几个地方的数据给大家看，差别很大。</p>
+    </aside>
+  </section>
+
+  <!-- 07 各地对比 -->
+  <section class="slide" data-title="各地喂到什么时候">
+    <div class="fx-bg dust" data-fx="cozy-dust"></div>
+    <p class="kicker">各地的妈妈喂到什么时候</p>
+    <h2 class="h2">同一件事，差别很大</h2>
+    <div class="card mt-l" style="padding:8px 16px" data-anim="fade-up">
+      <table class="t">
+        <thead><tr><th>地区</th><th>产假制度</th><th>孩子 6 个月时</th><th>孩子 1 岁时</th></tr></thead>
+        <tbody>
+          <tr><td>中国</td><td>法定 98 天，各省普遍延长到 158 天及以上</td><td>纯母乳 <span class="n">29.2%</span>（农村 28.3%，大城市 35.6%）</td><td class="na">—</td></tr>
+          <tr><td>美国</td><td>联邦只保障 12 周，无薪</td><td>仍在母乳喂养 <span class="n">63%</span>，纯母乳 30%</td><td>仍在母乳喂养 <span class="n">41%</span></td></tr>
+          <tr><td>挪威</td><td>北欧父母假接近一年（瑞典 480 天）</td><td>仍在母乳喂养约 <span class="n">80%</span></td><td>仍在母乳喂养 <span class="n">51%</span></td></tr>
+          <tr><td>英国</td><td class="na">—</td><td>仍在母乳喂养 <span class="n">34%</span>，纯母乳约 1%</td><td>不到 <span class="n">1%</span>，全球最低之一</td></tr>
+          <tr><td>德国</td><td class="na">—</td><td>纯母乳 <span class="n">13%</span></td><td class="na">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="src">“纯母乳”指只吃母乳；“仍在母乳喂养”含混合喂养。中国：中国发展研究基金会 2019；美国：CDC 2023 年出生队列；挪威：Spedkost 2018–19；英国：Infant Feeding Survey 2010、《柳叶刀》2016；德国：Frontiers in Public Health 2025。</p>
+    <aside class="notes">
+      <p><strong>先看中国。</strong>中国发展研究基金会 2019 年的全国调查，一万多位妈妈：6 个月内纯母乳喂养率 29.2%，农村 28.3%，大城市反而高一点，35.6%。国家目标是 50%。差这 20 个点，一个很实际的原因是<strong>产假</strong>：法定 98 天，各省延长后普遍 158 天左右，五个月出头。妈妈回去上班时孩子还没满 6 个月。所以中国有个专门的词：<strong>背奶妈妈</strong>。上班把奶吸出来，冷藏，晚上背回家。</p>
+      <p><strong>再看美国。</strong>86% 一出生吃过母乳，6 个月还在吃的 63%，1 岁 41%；纯母乳到 6 个月的 30%。产假比我们还短：联邦只保障 12 周，无薪；孩子不满 1 岁的妈妈六成在上班。</p>
+      <p><strong>欧洲两个极端。</strong>北欧父母假近一年，瑞典 480 天；挪威 6 个月八成还在吃，1 岁一半。英国 6 个月只有三分之一，1 岁不到 1%，全球最低之一。德国在中间，6 个月纯母乳 13%。</p>
+    </aside>
+  </section>
+
+  <!-- 08 规律 -->
+  <section class="slide" data-title="一个规律">
+    <div class="fx-bg dust" data-fx="cozy-dust"></div>
+    <p class="kicker">《柳叶刀》2016 · 一个规律</p>
+    <h2 class="h2">越发达的地方，妈妈喂得越短</h2>
+    <div class="vs anim-stagger-list">
+      <div class="card"><p class="eyebrow">中低收入国家</p><div class="big">大多数</div><p class="dim">孩子吃母乳吃到 1 岁以上</p></div>
+      <div class="mid">vs</div>
+      <div class="card"><p class="eyebrow">高收入国家</p><div class="big">约 1/5</div><p class="dim">1 岁时还在吃母乳的孩子</p></div>
+    </div>
+    <p class="foot-line" data-anim="fade-up">今天的妈妈，想喂，也想回去工作，还想做自己。<b>时间，是她们最缺的东西。</b></p>
+    <aside class="notes">
+      <p>把这些数放在一起，有一个规律。《柳叶刀》2016 年的全球研究：<strong>中低收入国家，大多数孩子吃到 1 岁以上；高收入国家，1 岁还在吃的只有五分之一</strong>。越是经济发达、妈妈越要出去工作的地方，母乳喂养时间越短。</p>
+      <p>我们这一代，很多人像我一样吃到两三岁，是因为我们的妈妈大多在家。<strong>今天的妈妈，想喂，也想回去工作，还想做自己。时间，是她们最缺的东西。</strong></p>
+    </aside>
+  </section>
+
+  <!-- 09 政策 -->
+  <section class="slide" data-title="各国在想办法">
+    <div class="fx-bg dust" data-fx="cozy-dust"></div>
+    <p class="kicker">各国都在想办法</p>
+    <h2 class="h2">法律能管的，各国都在管</h2>
+    <div class="pillars titles anim-stagger-list">
+      <div class="card"><span class="tag">泵奶的时间</span><h4>美国 PUMP 法案 · 2022</h4></div>
+      <div class="card"><span class="tag">哺乳的场地</span><h4>中国母乳喂养促进行动计划 · 2021–2025</h4></div>
+      <div class="card"><span class="tag">买吸奶器的钱</span><h4>美国平价医疗法案 · 医保覆盖吸奶器</h4></div>
+    </div>
+    <p class="foot-line" data-anim="fade-up">剩下的，<b>要靠产品。</b></p>
+    <aside class="notes">
+      <p>各国都在想办法。美国 2022 年通过 <strong>PUMP 法案</strong>，雇主要给妈妈留出泵奶时间，和一个不在卫生间里的房间；<strong>平价医疗法案</strong>要求大部分商业保险免费提供吸奶器。中国的<strong>母乳喂养促进行动计划</strong>，要求用人单位配母婴设施、保障哺乳时间。</p>
+      <p>法律管时间、房间和机器的钱，<strong>剩下的事要靠产品</strong>：怎么让吸奶这件事，不再把妈妈钉在一个地方。</p>
+      <p>过渡：穿戴式吸奶器就是冲着这个来的。下一页放 Air 1 的片子，1 分钟。</p>
+    </aside>
+  </section>
+
+  <!-- 10 视频 Air 1 -->
+  <section class="slide video-slide" data-title="视频 · Air 1" data-no-logo>
+    <video class="deck-video" src="media/6UqI-ek7EGQ.mp4" playsinline preload="auto" data-autoplay></video>
+    <div class="video-cap"><div><span class="pill">Momcozy Air 1 · 2025</span><h3>穿戴式吸奶器：放进内衣，不插电、不用手扶</h3></div></div>
+    <div class="video-missing"><h3>视频文件未找到</h3><p>请把视频放到 <code>media/6UqI-ek7EGQ.mp4</code></p><p>Meet the Momcozy Air 1 Ultra-Slim Wearable Breast Pump · youtube.com/watch?v=6UqI-ek7EGQ</p></div>
+    <div class="vbar"><i></i></div>
+    <aside class="notes">
+      <p>视频 1:02，自动播放。播完后说：</p>
+      <p><strong>穿戴式吸奶器就是冲着这个来的。</strong>它直接放进内衣，不插电、不用手扶，妈妈可以一边开会、做饭、带娃，一边把奶吸了。</p>
+    </aside>
+  </section>
+
+  <!-- 11 市场数字 -->
+  <section class="slide" data-title="市场数字">
+    <div class="fx-bg dust" data-fx="cozy-dust"></div>
+    <p class="kicker">市场数字 · 听个量级</p>
+    <h2 class="h2">这不是一个小生意</h2>
+    <div class="kpis anim-stagger-list">
+      <div class="kpi"><div class="big"><span class="counter" data-to="8">0</span><small>%</small></div><p class="lab">全球吸奶器市场每年增长 8% 左右</p><p class="src">Grand View Research 等四家机构，2026</p></div>
+      <div class="kpi"><div class="big">6.5<small>→12 亿</small></div><p class="lab">穿戴式吸奶器：2025 年约 6.5 亿美元，预计 2033 年接近 12 亿美元</p><p class="src">Grand View Research，2026</p></div>
+      <div class="kpi"><div class="big"><span class="counter" data-to="15">0</span><small>%</small></div><p class="lab">女性健康科技整体每年增长 15% 左右</p><p class="src">Grand View Research / GMI，2026</p></div>
+      <div class="kpi"><div class="big">1<small>万亿美元</small></div><p class="lab">把女性健康上的差距补上，到 2040 年每年给全球经济多带来至少这么多</p><p class="src">麦肯锡健康研究院 × 世界经济论坛，2024</p></div>
+    </div>
+    <aside class="notes">
+      <p>市场数字只念量级，语速放慢。</p>
+      <p>我只说三个：全球吸奶器市场每年增长 <strong>8% 左右</strong>；穿戴式这个品类 2025 年大约 <strong>6.5 亿美元</strong>，预计 2033 年接近 12 亿；女性健康科技整体每年增长 <strong>15% 左右</strong>。麦肯锡和世界经济论坛还算过一笔账：把女性健康上的差距补上，到 2040 年每年能给全球经济多带来至少 <strong>1 万亿美元</strong>。</p>
+      <p>过渡：讲这些，是想分享三个判断。</p>
+    </aside>
+  </section>
+
+  <!-- 12 三个判断 -->
+  <section class="slide" data-title="三个判断">
+    <div class="fx-bg dust" data-fx="cozy-dust"></div>
+    <p class="kicker">我的三个判断</p>
+    <h2 class="h2">为什么现在值得进来</h2>
+    <div class="pillars titles anim-stagger-list">
+      <div class="card"><span class="tag">判断一</span><h4>这是刚需，各国政府都在往里投</h4></div>
+      <div class="card"><span class="tag">判断二</span><h4>这个行业正在变成科技行业</h4></div>
+      <div class="card"><span class="tag">判断三</span><h4>中国团队有机会</h4></div>
+    </div>
+    <aside class="notes">
+      <p><strong>第一，这是刚需，而且各国政府都在往里投。</strong>妈妈对时间的需要不会消失，法律和医保正在把它变成制度。</p>
+      <p><strong>第二，这个行业正在变成科技行业。</strong>一台穿戴式吸奶器里有电机、气路、传感器、电池管理，还要连 App、记数据。今年科隆母婴展的主题就叫“和 AI 一起成长”，YouGov 的调查里一半德国父母愿意在母婴产品里用 AI，最担心的是安全和隐私。这个行业需要会做硬件、会写算法、也守得住用户隐私的人。</p>
+      <p><strong>第三，中国团队有机会。</strong>2025 年跨境电商进出口超过 2.7 万亿元，自主品牌出口增长 12.9%。我们离供应链近，工程迭代快。</p>
+      <p>收：如果有同学觉得母婴是个太细分的赛道，我的回答是，它服务的是每个家庭最累的那一两年，这件事在每个国家、每一年都在发生。</p>
+    </aside>
+  </section>
+
+  <!-- 13 章节 02 -->
+  <section class="slide sec-divider center tc" data-title="02 公司">
+    <div class="fx-bg soft" data-fx="constellation"></div>
+    <div>
+      <p class="sec-no" data-anim="rise-in">02</p>
+      <h1 class="h1" data-anim="fade-up">再说路特</h1>
+      <p class="lede" style="margin:0 auto" data-anim="fade-up">一家深圳公司，怎么走进全球 600 万个家庭</p>
+    </div>
+    <aside class="notes">
+      <p>过渡一句：行业说完了，说说我们这家公司。先看一分钟片子，这是上个月品牌日的主片。</p>
+    </aside>
+  </section>
+
+  <!-- 14 视频 Mom and More -->
+  <section class="slide video-slide" data-title="视频 · Mom, and More" data-no-logo>
+    <video class="deck-video" src="media/-eixgSEAjnA.mp4" playsinline preload="auto" data-autoplay></video>
+    <div class="video-cap"><div><span class="pill">Momcozy 品牌日 · 2026-09</span><h3>Mom, and More</h3></div></div>
+    <div class="video-missing"><h3>视频文件未找到</h3><p>请把视频放到 <code>media/-eixgSEAjnA.mp4</code></p><p>Momcozy Mom and More | Motherhood Expands Who You Are · youtube.com/watch?v=-eixgSEAjnA</p></div>
+    <div class="vbar"><i></i></div>
+    <aside class="notes">
+      <p>视频 1:00，自动播放。三位主角都是两个孩子的妈妈，片子讲的是：成为妈妈，不等于只成为一种身份。</p>
+      <p><strong>Allyson Felix</strong>：美国短跑运动员，拿过 <strong>11 枚奥运奖牌</strong>，是美国田径史上奖牌最多的运动员之一。退役后创办了运动鞋品牌 Saysh 和运动员经纪公司 Always Alpha，一直在推动体育界给怀孕、生育的女运动员更好的保障。</p>
+      <p><strong>Kellie Gerardi</strong>：研究宇航员、科普作者，<strong>最早进入太空的 100 位女性之一</strong>，在太空做过科学实验，正在准备下一次研究飞行。她还写了一套给孩子的太空绘本《Luna Muna》。</p>
+      <p><strong>Reshma Saujani</strong>：公益组织 <strong>Girls Who Code</strong> 的创始人，专门教女孩学编程；现在是 Moms First 的 CEO，推动平价托育、带薪产假和女性经济独立。</p>
+      <p>一句话收：奥运冠军、宇航员、科技公益创始人，当了妈妈以后，还是她们自己。</p>
+    </aside>
+  </section>
+
+  <!-- 15 时间线 -->
+  <section class="slide" data-title="公司时间线">
+    <div class="fx-bg dust" data-fx="cozy-dust"></div>
+    <p class="kicker">路特创新 · 2017 – 2026</p>
+    <h2 class="h2">一家深圳公司，用七年做到品类第一</h2>
+    <div class="tl anim-stagger-list">
+      <div><div class="dot"></div><div class="year">2017</div><p>路特创新在深圳成立</p></div>
+      <div><div class="dot"></div><div class="year">2018</div><p>Momcozy 品牌创立，首批产品有电动吸奶器和免手扶吸奶文胸</p></div>
+      <div><div class="dot"></div><div class="year">2022</div><p>S10 穿戴式吸奶器获红点设计奖</p></div>
+      <div><div class="dot"></div><div class="year">2024</div><p>穿戴式吸奶器全球份额第一，约 19%（Grand View Research）</p></div>
+      <div><div class="dot"></div><div class="year">2025</div><p>Air 1 入选《时代》年度最佳发明特别提及</p></div>
+      <div><div class="dot"></div><div class="year">2026</div><p>服务全球 600 万+ 妈妈和家庭，覆盖 80+ 国家和地区</p></div>
+    </div>
+    <p class="src" style="margin-top:56px">份额口径：2024 年穿戴式吸奶器品类，线上加线下；北美 22.21%、欧洲 20.2%，均为第一。</p>
+    <aside class="notes">
+      <p>路特 <strong>2017 年在深圳成立，2018 年创立 Momcozy</strong>。到今年 6 月，全球超过 600 万的妈妈和家庭用过我们的产品，业务覆盖 80 多个国家和地区。</p>
+      <p>有一个数字我们自己很看重：按 Grand View Research 的统计，<strong>2024 年 Momcozy 是全球穿戴式吸奶器市场份额第一的品牌</strong>，全球约 19%，北美和欧洲也都是第一。一家深圳公司从成立到走到这个位置，用了七年。</p>
+      <p>过渡：数字之外，我想讲两件我在路特看到的事。</p>
+    </aside>
+  </section>
+
+  <!-- 16 第一件事 -->
+  <section class="slide" data-title="第一件事：产品怎么来的">
+    <div class="fx-bg dust" data-fx="cozy-dust"></div>
+    <p class="kicker">第一件事 · 产品怎么来的</p>
+    <h2 class="h2">先看妈妈哪里不方便，再决定做什么</h2>
+    <div class="steps anim-stagger-list">
+      <div class="step"><span class="yr">2018</span><div class="num">1</div><h4>盯住背奶妈妈</h4><p>产假结束回到职场，一天要吸好几次奶；传统吸奶器要求固定的地方、固定的时间。</p></div>
+      <div class="step"><span class="yr">2018</span><div class="num">2</div><h4>先把手空出来</h4><p>最早的产品之一是免手扶吸奶文胸，把吸乳罩固定住。</p></div>
+      <div class="step"><span class="yr">2022</span><div class="num">3</div><h4>把机器放进内衣</h4><p>S10 穿戴式吸奶器拿下红点设计奖。</p></div>
+      <div class="step"><span class="yr">2025</span><div class="num">4</div><h4>更薄，还能看数据</h4><p>Air 1 在 App 上实时显示吸了多少奶，入选《时代》年度最佳发明特别提及。</p></div>
+    </div>
+    <div class="quote-line" data-anim="fade-up">“安静、小巧，能让女性在职场里不被察觉地吸奶。”<small>红点设计奖评委对 Momcozy S10 的评语，2022 · 品牌信条：Always Put Moms First</small></div>
+    <aside class="notes">
+      <p><strong>第一件，是产品怎么来的。</strong>2018 年品牌刚起步，团队盯住的是一群“背奶妈妈”：产假结束回到职场，上班一天要吸好几次奶，传统吸奶器要求她们坐在固定的地方、固定的时间。所以 Momcozy 最早的产品里，就有一件<strong>免手扶的吸奶文胸</strong>，先把妈妈的手空出来；再往后，干脆把整台机器做小、做轻，直接放进内衣里。</p>
+      <p>2022 年，S10 拿了红点奖。评委只写了一句话：<strong>它安静、小巧，能让女性在职场里不被察觉地吸奶</strong>。学工业设计的同学应该能体会，评委夸的是场景：职场。从那以后又迭代了好几代，2025 年的 Air 1 更薄，还能在 App 上实时看到吸了多少奶，入选了《时代》2025 年度最佳发明特别提及。</p>
+      <p>品牌信条叫 Always Put Moms First，大白话就是：<strong>先看妈妈哪里不方便，再决定做什么。</strong></p>
+    </aside>
+  </section>
+
+  <!-- 17 六类产品 -->
+  <section class="slide" data-title="第二件事：六类产品">
+    <div class="fx-bg dust" data-fx="cozy-dust"></div>
+    <p class="kicker">第二件事 · 公司怎么用技术把照顾这件事做轻</p>
+    <h2 class="h2">从怀孕到宝宝两三岁，六类产品</h2>
+    <div class="gallery anim-stagger-list">
+      <figure><div class="img-frame"><img src="media/products/ergonest.jpg" alt=""></div><figcaption><b>孕期与产后恢复</b><span>Ergonest 托腹带 · 科隆母婴展创新奖 2025</span></figcaption></figure>
+      <figure><div class="img-frame"><img src="media/products/warmer.jpg" alt=""></div><figcaption><b>喂养</b><span>吸奶器、暖奶器、储奶</span></figcaption></figure>
+      <figure><div class="img-frame"><img src="media/products/soundmachine.jpg" alt=""></div><figcaption><b>睡眠与监测</b><span>白噪音机、婴儿监视器</span></figcaption></figure>
+      <figure><div class="img-frame"><img src="media/products/bra.jpg" alt=""></div><figcaption><b>日常护理</b><span>哺乳内衣、护理用品</span></figcaption></figure>
+      <figure><div class="img-frame"><img src="media/products/carrier.jpg" alt=""></div><figcaption><b>出行</b><span>背带、推车</span></figcaption></figure>
+      <figure><div class="img-frame"><img src="media/products/purifier.jpg" alt=""></div><figcaption><b>家居环境</b><span>空气净化器、加湿器</span></figcaption></figure>
+    </div>
+    <p class="foot-line" data-anim="fade-up">品类很多，做法是一样的：<b>找到爸妈最累的那个动作，用技术把它拿掉。</b></p>
+    <aside class="notes">
+      <p><strong>第二件，是公司怎么用技术把照顾这件事做轻。</strong>很多人以为 Momcozy 只做吸奶器。其实从怀孕到宝宝两三岁，一个家庭要用到的东西我们大多在做：孕期和产后恢复、喂养、睡眠与监测、日常护理、出行、家居环境，<strong>一共六类</strong>。托腹带拿了去年科隆母婴展的创新奖，背带、推车、空气净化器、加湿器也都有。</p>
+      <p>品类很多，做法是一样的：<strong>找到爸妈最累的那个动作，用技术把它拿掉。</strong></p>
+      <p>过渡：我举一个今年的例子。</p>
+    </aside>
+  </section>
+
+  <!-- 18 BM08 -->
+  <section class="slide" data-title="BM08：让爸妈敢睡觉">
+    <div class="fx-bg dust" data-fx="cozy-dust"></div>
+    <div class="split wide">
+      <div>
+        <p class="kicker">今年的一个例子 · BM08 婴儿监视器</p>
+        <h2 class="h2">半夜醒来，先看孩子还有没有在呼吸</h2>
+        <ul class="feat anim-stagger-list">
+          <li><span class="ic">1</span><div><b>毫米波雷达，隔着被子感知呼吸起伏</b><span>宝宝身上什么都不用戴。过去要穿戴传感器，要充电，一踢就没了。</span></div></li>
+          <li><span class="ic">2</span><div><b>2K 摄像头 + AI</b><span>宝宝哭了、口鼻被捂住了，手机上会提醒。</span></div></li>
+          <li><span class="ic">3</span><div><b>它解决的不是“看得见”，是让爸妈敢睡觉</b><span>2026 年 5 月发布。</span></div></li>
+        </ul>
+      </div>
+      <figure class="img-frame contain" data-anim="fade-up"><img src="media/products/bm08.jpg" alt="BM08"></figure>
+    </div>
+    <aside class="notes">
+      <p>当了爸妈的人都有一个动作：<strong>半夜醒来，先去看一眼孩子还有没有在呼吸</strong>。过去的办法是让宝宝穿戴一个传感器，要充电，宝宝一踢就没了。</p>
+      <p>今年 5 月我们发布的 BM08 婴儿监视器，用的是<strong>毫米波雷达</strong>：隔着被子感知宝宝的呼吸起伏，宝宝身上什么都不用戴；再加一颗 2K 摄像头和 AI，宝宝哭了、口鼻被捂住了，手机上会提醒。它解决的不是“看得见”，是<strong>让爸妈敢睡觉</strong>。</p>
+    </aside>
+  </section>
+
+  <!-- 19 回扣 -->
+  <section class="slide quote center tc" data-title="成为妈妈，也不必放弃成为自己">
+    <div class="fx-bg glow soft" data-fx="cozy-glow" data-fx-region="edges"></div>
+    <div style="max-width:1400px">
+      <div class="mark">“</div>
+      <blockquote data-anim="fade-up">技术不是用来炫的，<br>是用来把时间和睡眠还给爸妈的。</blockquote>
+      <p class="foot-line" data-anim="fade-up" style="margin-top:48px">成为妈妈，<b>也不必放弃成为自己。</b></p>
+    </div>
+    <aside class="notes">
+      <p>这就是这家公司对技术的看法：<strong>技术不是用来炫的，是用来把时间和睡眠还给爸妈的。</strong>用一句中文说：成为妈妈，也不必放弃成为自己。</p>
+      <p>回扣开头：我妈妈那一代人喂到五岁，是把自己整个人都给了孩子。今天的妈妈想喂，也想上班，也想做自己。<strong>我们做的每一件产品，都是在替她们把时间抢回来一点。</strong></p>
+    </aside>
+  </section>
+
+  <!-- 20 我在路特做什么 -->
+  <section class="slide" data-title="我在路特做什么">
+    <div class="fx-bg dust" data-fx="cozy-dust"></div>
+    <p class="kicker">我在路特做什么 · IoT</p>
+    <h2 class="h2">让设备连上同一个 App，再用 AI 帮妈妈省时间</h2>
+    <div class="flow" data-anim="fade-up">
+      <div class="col">
+        <div class="card"><h4>穿戴式吸奶器</h4><p>Air 1 · M5 Smart · W1</p></div>
+        <div class="card"><h4>婴儿监视器</h4><p>刚才说的 BM08 也接在这里</p></div>
+        <div class="card"><h4>体温计 · 白噪音机</h4><p>更多设备在接入</p></div>
+      </div>
+      <div class="arrow">→</div>
+      <div class="hub"><h4>Momcozy App</h4><p>吸了多少奶、宝宝睡得怎么样，都记在一个地方</p></div>
+      <div class="arrow">→</div>
+      <div class="col">
+        <div class="card"><h4>AI 吸奶计划</h4><p>按每位妈妈的习惯排时间表</p></div>
+        <div class="card"><h4>实时数据</h4><p>奶量、电量、集奶杯满了提醒</p></div>
+        <div class="card"><h4>远程控制</h4><p>档位、模式，手机上调</p></div>
+      </div>
+    </div>
+    <p class="foot-line" data-anim="fade-up">以前在美的，我让空调、冰箱连上网；现在屏幕那头，<b>是一位刚当妈妈的人。</b></p>
+    <aside class="notes">
+      <p>语气放松一点，从公司切到自己。</p>
+      <p>我在路特负责 IoT 产品。简单说，就是让吸奶器、婴儿监视器、体温计、白噪音机这些设备<strong>连上同一个 Momcozy App</strong>，把妈妈吸了多少奶、宝宝睡得怎么样记下来，再用 <strong>AI 给每位妈妈排一个适合她的吸奶计划</strong>。刚才说的 BM08，也是接进这个 App 的。</p>
+      <p>以前在美的，我做的是让空调、冰箱连上网；现在设备换了，<strong>屏幕那头换成了一位刚当妈妈的人</strong>。她可能凌晨还在吸奶，产品慢一秒、错一步，她都感觉得到。这是我来路特以后感受最深的一点。</p>
+    </aside>
+  </section>
+
+  <!-- 21 章节 03 -->
+  <section class="slide sec-divider center tc" data-title="03 最后说你">
+    <div class="fx-bg soft" data-fx="constellation"></div>
+    <div>
+      <p class="sec-no" data-anim="rise-in">03</p>
+      <h1 class="h1" data-anim="fade-up">最后说你</h1>
+      <p class="lede" style="margin:0 auto" data-anim="fade-up">来路特，会经历什么</p>
+    </div>
+    <aside class="notes">
+      <p>最后说大家最关心的：刚毕业，没经验，来了能做什么。我不讲制度，讲两件事。<strong>第一件，先从我自己的经历说起。</strong></p>
+    </aside>
+  </section>
+
+  <!-- 22 腾讯故事 -->
+  <section class="slide" data-title="大三暑假，腾讯">
+    <div class="fx-bg dust" data-fx="cozy-dust"></div>
+    <div class="story-head"><p class="kicker">第一件 · 我自己的故事</p></div>
+    <h2 class="h2">大三暑假，腾讯，两个实习生，两位导师</h2>
+    <div class="vs anim-stagger-list">
+      <div class="card"><p class="eyebrow">他的导师</p><div class="who">一位做执行的设计师</div><ul><li>帮他想项目</li><li>帮他做组内分享的 PPT</li><li>手把手告诉他每一步怎么做</li></ul></div>
+      <div class="mid">vs</div>
+      <div class="card"><p class="eyebrow">我的导师</p><div class="who">整个设计组的组长</div><ul><li>太忙，每天见不到人</li><li>头几天不知道该做什么，后面越来越虚</li><li>自己给 Mac 版 QQ 音乐做了一套方案，一个星期，被批“全是一坨屎”，让重做，不说为什么</li></ul></div>
+    </div>
+    <div class="result anim-stagger-list">
+      <div class="card"><b>他</b><span>留在了腾讯</span></div>
+      <div class="card me"><b>我</b><span>没有留下</span></div>
+    </div>
+    <aside class="notes">
+      <p>我大三暑假在腾讯实习。跟我一起进去的还有另一个实习生。腾讯也有导师制，我们俩各分了一位导师：<strong>他的导师是一位做执行的设计师，我的导师是整个设计组的组长。</strong></p>
+      <p>我当时特别羡慕他。他的导师把能教的全教给他：帮他想项目，帮他做组内分享的 PPT，手把手告诉他每一步怎么做。我的导师呢，太忙了，每天见不到人。头几天我根本不知道自己该做什么，无所事事；后面越来越虚，因为实习只有两个月，结束就要决定能不能留下。</p>
+      <p>我只能不停地做竞品分析。当时组里在做 Mac 版的 QQ 音乐，我就自己给 QQ 音乐做了一套全新的方案，没有任何人告诉我方向是什么。花了一个星期，把主流程全部梳理完，设计做好，发给导师。导师狠狠批了我一顿，说全是一坨屎，让我重做，也不告诉我为什么。<strong>后来，我没有留在腾讯，那个同学留下了。</strong></p>
+    </aside>
+  </section>
+
+  <!-- 23 第一件 -->
+  <section class="slide" data-title="第一件：有人带你">
+    <div class="fx-bg dust" data-fx="cozy-dust"></div>
+    <p class="kicker">第一件</p>
+    <h2 class="h2">有人带你，而且带你的人<span class="em">大概率不是你的领导</span></h2>
+    <div class="pillars short anim-stagger-list">
+      <div class="card"><span class="tag">01</span><h4>一对一帮带</h4><p class="dim">刚进一个全新的环境，没有安全感。有人告诉你：这里你能做什么，先做什么，后做什么。</p></div>
+      <div class="card"><span class="tag">02</span><h4>导师大概率不是你的领导</h4><p class="dim">你问多蠢的问题，都不用担心影响考核。</p></div>
+      <div class="card"><span class="tag">03</span><h4>至少不会像我当年那样</h4><p class="dim">无所事事几天，再被批一顿，还不知道为什么。</p></div>
+    </div>
+    <aside class="notes">
+      <p>我想说的是：<strong>一个刚毕业的人进到一个全新的环境，是非常没有安全感的。</strong>他需要有人告诉他，这里你能做什么，先做什么，后做什么。</p>
+      <p>路特有<strong>一对一的帮带</strong>，而且你的导师大概率不是你的领导。这一点很重要：你问多蠢的问题，都不用担心影响考核。至少，你不会经历我刚毕业时经历的那个样子。</p>
+    </aside>
+  </section>
+
+  <!-- 24 第二件 -->
+  <section class="slide" data-title="第二件：我们在开荒">
+    <div class="fx-bg dust" data-fx="cozy-dust"></div>
+    <p class="kicker">第二件</p>
+    <h2 class="h2">我们在开荒：在一个蓝海市场，<span class="em">定义一个新品类</span></h2>
+    <div class="pillars titles anim-stagger-list">
+      <div class="card"><span class="tag">开荒阶段</span><h4>流程、标准、方法，很多都还没有</h4></div>
+      <div class="card"><span class="tag">蓝海市场</span><h4>没有现成答案可抄，也没有谁规定该怎么做</h4></div>
+      <div class="card"><span class="tag">定义新品类</span><h4>你参与决定的，是这个品类长什么样</h4></div>
+    </div>
+    <div class="roles" data-anim="fade-up">
+      <span class="pill pill-accent">2027 届开放方向</span><span class="pill">产品</span><span class="pill">算法</span><span class="pill">数据分析</span><span class="pill">UI 设计</span><span class="pill">采购开发</span><span class="pill">海外销售与渠道运营</span><span class="pill">企业文化</span>
+    </div>
+    <aside class="notes">
+      <p><strong>第二件，你来了会经历的，是开荒。</strong>我们团队现在处在开荒阶段：在一个蓝海市场里，定义一个新的品类。没有前人的路，流程、标准、方法很多都还没有；没有现成答案可抄，也没有谁规定该怎么做。<em>【一句话说这个品类是什么、为什么是蓝海】</em></p>
+      <p>这意味着：你来的时候，很多规矩还没写，有些会是你写的；你参与决定的，是这个品类长什么样。从第一天起你就在主导一件事，而不是维护一件事，这是学得最快的阶段。说实话，流程没有大厂那么完善，很多问题要自己先定义清楚再做。今年校招开放了产品、算法、数据分析、UI 设计、采购开发、海外销售和渠道运营这些方向。</p>
+    </aside>
+  </section>
+
+  <!-- 26 一句实话（可删） -->
+  <section class="slide quote center tc" data-title="一句实话">
+    <div class="fx-bg dust" data-fx="cozy-dust"></div>
+    <div style="max-width:1500px">
+      <div class="mark">“</div>
+      <blockquote data-anim="fade-up">想要稳定流程和大厂光环的同学，<br>路特可能不是最优解；<br>想在三年内做出一个<b>自己能完整说清楚的产品</b>，<br>这里合适。</blockquote>
+          </div>
+    <aside class="notes">
+      <p>这一页可删。多说一句实话：想要稳定流程和大厂光环的同学，路特可能不是最优解；<strong>想在三年内做出一个自己能完整说清楚的产品的同学，这里合适。</strong></p>
+    </aside>
+  </section>
+
+  <!-- 27 学长的话 -->
+  <section class="slide quote center" data-title="学长的一句话">
+    <div class="fx-bg dust" data-fx="cozy-dust"></div>
+    <div style="max-width:1400px">
+      <div class="mark">“</div>
+      <blockquote data-anim="fade-up">能把用户的问题想清楚、<br>再把它翻译成工程问题的人，<b>在哪里都缺。</b></blockquote>
+          </div>
+    <aside class="notes">
+      <p>作为学长，我再多说一句。咱们学校的同学<strong>工程底子扎实</strong>，这是很大的优势。我这些年最大的体会是：能把用户的问题想清楚、再把它翻译成工程问题的人，在哪里都缺。母婴这个行业，特别需要这样的人。<em>【可补一句给工业设计、电信、计算机等专业同学的话】</em></p>
+    </aside>
+  </section>
+
+  <!-- 28 结尾 -->
+  <section class="slide" data-title="饮水思源">
+    <div class="fx-bg dust" data-fx="cozy-dust"></div>
+    <div class="closing">
+      <div>
+        <p class="kicker">路特创新 · 2027 届校园招聘</p>
+        <h1 class="h1" data-anim="rise-in">饮水思源</h1>
+        <p class="lede">选一个你愿意长期投入、做出来能让别人过得好一点的方向，会走得更踏实。</p>
+        <div class="procs" data-anim="fade-up">
+          <span class="p">在线测评</span><span class="sep">→</span><span class="p">简历筛选</span><span class="sep">→</span><span class="p">一面 / 笔试</span><span class="sep">→</span><span class="p">二面</span><span class="sep">→</span><span class="p">HR 面</span><span class="sep">→</span><span class="p">签约</span>
+        </div>
+        <p class="entry">投递入口：公众号 <b>「ROOT路特」</b> · 明年这个时候，深圳见。</p>
+      </div>
+      <div class="qr" data-anim="fade-up"><img src="media/qr.jpg" alt="公众号 ROOT路特 二维码"><b>扫码关注「ROOT路特」</b></div>
+    </div>
+    <aside class="notes">
+      <p>放慢语速。</p>
+      <p>十五年前，我和大家一样，在这个校园里想自己以后要做什么。交大有句话，叫<strong>饮水思源</strong>。今天回来，一半是来招人，一半是想跟学弟学妹们说：毕业以后的路很长，<strong>选一个你愿意长期投入、做出来能让别人过得好一点的方向，会走得更踏实。</strong></p>
+      <p>路特 2027 届校招已经开始了。流程是在线测评、简历筛选、两轮面试和 HR 面试，投递入口是公众号「ROOT路特」<em>【以 HR 现场物料为准】</em>。希望明年这个时候，能在深圳见到你们。</p>
+    </aside>
+  </section>
+
+  <!-- 29 谢谢 -->
+  <section class="slide thanks center tc" data-title="谢谢">
+    <div class="fx-bg glow" data-fx="cozy-glow" data-fx-region="edges"></div>
+    <div>
+      <div class="anim-confetti-burst" style="display:inline-block;padding:40px"></div>
+      <h1 class="h1" data-anim="rise-in">谢谢大家</h1>
+      <p class="lede">Q &amp; A · 路特创新 · 公众号「ROOT路特」</p>
+    </div>
+    <aside class="notes">
+      <p>讲完停一下再说谢谢。问答环节的应对见讲稿第 06 部分：专利官司、营收、薪资、差评、男生做母婴、吃到 5 岁。</p>
+    </aside>
+  </section>
+
+  <!-- 30 备用视频 -->
+  <section class="slide video-slide" data-title="备用视频 · Cozy by You" data-no-logo>
+    <video class="deck-video" src="media/MC3VQFCdEM4.mp4" playsinline preload="metadata" data-autoplay></video>
+    <div class="video-cap"><div><span class="pill">备用 · Momcozy 品牌日 2025-09</span><h3>Cozy by You：和妈妈、专家、工程师、设计师一起做</h3></div></div>
+    <div class="video-missing"><h3>视频文件未找到</h3><p>请把视频放到 <code>media/MC3VQFCdEM4.mp4</code></p><p>Cozy by You | With Moms, For Moms · youtube.com/watch?v=MC3VQFCdEM4</p></div>
+    <div class="vbar"><i></i></div>
+    <aside class="notes">
+      <p>备用片，1:15，放在最后不进主流程。问答里有人问“工程师、设计师在这家公司做什么”时可以放。片中原话：Momcozy 由妈妈、专家、工程师和设计师一起做出来。</p>
+    </aside>
+  </section>
+
+  <div class="deck-footer"><span><span class="wordmark">Momcozy</span>路特创新 × 西安交通大学 · 2027 届校园招聘</span><span class="slide-number" data-current="1" data-total="29"></span></div>
+</div>
+
+<script src="assets/runtime.js"></script>
 <script>
+/* 浅色主题用的流动色块背景：品牌粉色、带拖尾，只用背景色淡出，不压暗画面 */
 (function(){
-  var ENC='deck.enc', KEY='deck_pw';
-  var f=document.getElementById('f'),pw=document.getElementById('pw'),go=document.getElementById('go'),msg=document.getElementById('msg'),bar=document.getElementById('bar'),fill=document.getElementById('fill');
-  function say(t,err){msg.textContent=t;msg.className='msg'+(err?' err':'')}
-  async function deriveKey(password,salt){
-    var raw=await crypto.subtle.importKey('raw',new TextEncoder().encode(password),'PBKDF2',false,['deriveKey']);
-    return crypto.subtle.deriveKey({name:'PBKDF2',salt:salt,iterations:200000,hash:'SHA-256'},raw,{name:'AES-GCM',length:256},false,['decrypt']);
-  }
-  async function fetchEnc(){
-    var r=await fetch(ENC,{cache:'force-cache'});
-    if(!r.ok)throw new Error('http '+r.status);
-    var total=+r.headers.get('content-length')||0;
-    if(!r.body||!total)return new Uint8Array(await r.arrayBuffer());
-    var reader=r.body.getReader(),chunks=[],got=0;bar.classList.add('on');
-    for(;;){var x=await reader.read();if(x.done)break;chunks.push(x.value);got+=x.value.length;fill.style.width=Math.round(got/total*100)+'%';}
-    var out=new Uint8Array(got),o=0;chunks.forEach(function(c){out.set(c,o);o+=c.length});return out;
-  }
-  async function unlock(password,quiet){
-    go.disabled=true;
-    try{
-      if(!quiet)say('正在加载，约 60 MB，请稍候…');
-      var buf=await fetchEnc();
-      var salt=buf.slice(0,16),iv=buf.slice(16,28),data=buf.slice(28);
-      if(!quiet)say('正在解密…');
-      var key=await deriveKey(password,salt);
-      var plain=await crypto.subtle.decrypt({name:'AES-GCM',iv:iv},key,data);
-      try{sessionStorage.setItem(KEY,password)}catch(e){}
-      var html=new TextDecoder().decode(plain);
-      document.open();document.write(html);document.close();
-    }catch(e){
-      go.disabled=false;bar.classList.remove('on');fill.style.width='0';
-      if(String(e).indexOf('http')>-1||String(e).indexOf('fetch')>-1)say('文件加载失败，请检查网络后重试',true);
-      else{say('密码不对，再试一次',true);try{sessionStorage.removeItem(KEY)}catch(x){}}
-    }
-  }
-  f.addEventListener('submit',function(e){e.preventDefault();if(pw.value)unlock(pw.value,false)});
-  /* 同一标签页内（含演讲者视图的预览窗口）已解锁过，直接打开 */
-  var saved=null;try{saved=sessionStorage.getItem(KEY)}catch(e){}
-  if(saved){f.style.visibility='hidden';unlock(saved,true)}
+  window.HPX=window.HPX||{};
+  window.HPX['cozy-blobs']=function(el){
+    var U=window.HPX._u,k=U.canvas(el),ctx=k.ctx;
+    var cols=[[238,156,167],[243,130,69],[200,189,255]];
+    var region=el.getAttribute('data-fx-region')||'full';
+    function range(i){ if(region==='right')return [.76,.95]; if(region==='edges')return (i%2===0)?[.04,.17]:[.83,.96]; return [.1,.9]; }
+    var blobs=[];for(var i=0;i<3;i++){var rg=range(i);blobs.push({x:U.rand(rg[0],rg[1]),y:U.rand(.25,.75),lo:rg[0],hi:rg[1],vx:U.rand(-.05,.05),vy:U.rand(-.05,.05),r:U.rand(150,220),c:cols[i],p:Math.random()*6,a:.7});}
+    var stop=U.loop(function(t){
+      ctx.globalCompositeOperation='source-over';
+      ctx.fillStyle='rgba(249,247,245,0.08)';ctx.fillRect(0,0,k.w,k.h);
+      for(var i=0;i<blobs.length;i++){var b=blobs[i];
+        b.x+=b.vx*.01;b.y+=b.vy*.01;if(b.x<b.lo||b.x>b.hi)b.vx*=-1;if(b.y<.15||b.y>.85)b.vy*=-1;
+        var px=b.x*k.w+Math.sin(t*.08+b.p)*30,py=b.y*k.h+Math.cos(t*.07+b.p)*24,r=b.r+Math.sin(t*.15+b.p)*24,q=b.c;
+        var g=ctx.createRadialGradient(px,py,0,px,py,r);
+        g.addColorStop(0,'rgba('+q[0]+','+q[1]+','+q[2]+','+b.a+')');g.addColorStop(.55,'rgba('+q[0]+','+q[1]+','+q[2]+','+(b.a*.4)+')');g.addColorStop(1,'rgba('+q[0]+','+q[1]+','+q[2]+',0)');
+        ctx.fillStyle=g;ctx.beginPath();ctx.arc(px,py,r,0,Math.PI*2);ctx.fill();}
+      ctx.globalCompositeOperation='source-over';
+    });
+    return {stop:function(){stop();k.destroy()}};
+  };
+  window.HPX['cozy-glow']=function(el){
+    var U=window.HPX._u,k=U.canvas(el),ctx=k.ctx;
+    var pal=['#F6B3BF','#BFE9D3','#FFD2B3','#D9D0FF'];
+    var region=el.getAttribute('data-fx-region')||'full';
+    function range(i){ if(region==='right')return [.62,.95]; if(region==='edges')return (i%2===0)?[.02,.2]:[.8,.98]; return [0,1]; }
+    var blobs=[];for(var i=0;i<4;i++){var rg=range(i);blobs.push({x:U.rand(rg[0],rg[1]),y:U.rand(0,1),lo:rg[0],hi:rg[1],vx:U.rand(-.08,.08),vy:U.rand(-.08,.08),r:U.rand(180,320),c:pal[i%pal.length]});}
+    function rgb(hx){var m=hx.replace('#','').match(/.{2}/g);return m?m.map(function(x){return parseInt(x,16)}):[124,92,255]}
+    var stop=U.loop(function(t){
+      ctx.globalCompositeOperation='source-over';
+      ctx.fillStyle='rgba(249,247,245,0.2)';ctx.fillRect(0,0,k.w,k.h);
+      for(var i=0;i<blobs.length;i++){var b=blobs[i];
+        b.x+=b.vx*.01;b.y+=b.vy*.01;if(b.x<b.lo||b.x>b.hi)b.vx*=-1;if(b.y<0||b.y>1)b.vy*=-1;
+        var px=b.x*k.w,py=b.y*k.h,r=b.r+Math.sin(t*.8+b.x*6)*30,q=rgb(b.c);
+        var g=ctx.createRadialGradient(px,py,0,px,py,r);
+        g.addColorStop(0,'rgba('+q[0]+','+q[1]+','+q[2]+',0.95)');g.addColorStop(.55,'rgba('+q[0]+','+q[1]+','+q[2]+',0.5)');g.addColorStop(1,'rgba('+q[0]+','+q[1]+','+q[2]+',0)');
+        ctx.fillStyle=g;ctx.beginPath();ctx.arc(px,py,r,0,Math.PI*2);ctx.fill();}
+      ctx.globalCompositeOperation='source-over';
+    });
+    return {stop:function(){stop();k.destroy()}};
+  };
+  window.HPX['cozy-dust']=function(el){
+    var U=window.HPX._u,k=U.canvas(el),ctx=k.ctx;
+    var cols=[[246,179,191],[191,233,211],[255,210,179],[217,208,255],[255,192,203]];
+    var N=14,ps=[];
+    function mk(y){return {x:Math.random(),y:y===undefined?Math.random():y,r:U.rand(3,9),v:U.rand(.004,.009),s:U.rand(.3,.9),p:Math.random()*6,c:cols[Math.floor(Math.random()*cols.length)],a:U.rand(.25,.5)}}
+    for(var i=0;i<N;i++)ps.push(mk());
+    var stop=U.loop(function(t){
+      ctx.clearRect(0,0,k.w,k.h);
+      for(var i=0;i<ps.length;i++){var q=ps[i];
+        q.y-=q.v*.016;if(q.y<-.05)ps[i]=q=mk(1.05);
+        var px=(q.x+Math.sin(t*q.s+q.p)*.02)*k.w,py=q.y*k.h,r=q.r*(1+Math.sin(t*.8+q.p)*.15);
+        var g=ctx.createRadialGradient(px,py,0,px,py,r*2.2);
+        g.addColorStop(0,'rgba('+q.c[0]+','+q.c[1]+','+q.c[2]+','+q.a+')');g.addColorStop(1,'rgba('+q.c[0]+','+q.c[1]+','+q.c[2]+',0)');
+        ctx.fillStyle=g;ctx.beginPath();ctx.arc(px,py,r*2.2,0,Math.PI*2);ctx.fill();}
+    });
+    return {stop:function(){stop();k.destroy()}};
+  };
+})();
+</script>
+<script src="assets/animations/fx-runtime.js"></script>
+<script>
+/* 视频页：进入自动播放，离开暂停并回到开头；文件缺失时显示提示 */
+(function(){
+  var preview=/[?&]preview=\d+/.test(location.search||'');
+  var slides=[].slice.call(document.querySelectorAll('.slide.video-slide'));
+  slides.forEach(function(s){
+    var v=s.querySelector('video');if(!v)return;
+    v.addEventListener('error',function(){s.classList.add('missing')});
+    if(preview){v.muted=true;v.removeAttribute('data-autoplay');v.removeAttribute('controls');v.preload='metadata';return}
+    var obs=new MutationObserver(function(){
+      if(s.classList.contains('is-active')){
+        if(s.classList.contains('missing'))return;
+        try{v.currentTime=0}catch(e){}
+        var p=v.play();if(p&&p.catch)p.catch(function(){});
+      }else{v.pause();try{v.currentTime=0}catch(e){}}
+    });
+    obs.observe(s,{attributes:true,attributeFilter:['class']});
+  });
+  /* 自绘进度条 + 点击画面暂停/继续（原生控件在缩放画布里会错位） */
+  slides.forEach(function(s){
+    var v=s.querySelector('video'),bar=s.querySelector('.vbar i');if(!v||!bar)return;
+    v.addEventListener('timeupdate',function(){if(v.duration)bar.style.width=(v.currentTime/v.duration*100)+'%'});
+    v.addEventListener('play',function(){s.classList.remove('paused')});
+    v.addEventListener('pause',function(){if(s.classList.contains('is-active'))s.classList.add('paused')});
+    v.addEventListener('ended',function(){s.classList.add('paused')});
+    s.addEventListener('click',function(e){if(preview)return;if(v.paused)v.play().catch(function(){});else v.pause()});
+  });
+  /* 视频页上按空格暂停/继续，不翻页 */
+  document.addEventListener('keydown',function(e){
+    if(e.code!=='Space')return;
+    var s=document.querySelector('.slide.video-slide.is-active');if(!s)return;
+    var v=s.querySelector('video');if(!v||s.classList.contains('missing'))return;
+    e.preventDefault();e.stopImmediatePropagation();
+    if(v.paused)v.play().catch(function(){});else v.pause();
+  },true);
 })();
 </script>
 </body>
